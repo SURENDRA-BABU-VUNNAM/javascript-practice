@@ -1,16 +1,16 @@
+"use strict" 
 
+// const account_id = 123456
+// let account_email ="surendrababu@gmail"
+// var account_password ="78910"
+// account_city = "bellary"
 
-const account_id = 123456
-let account_email ="surendrababu@gmail"
-var account_password ="78910"
-account_city = "bellary"
+// // account_id = 2 // not allowed
 
-// account_id = 2 // not allowed
-
-account_email = "vunnam@gmail.com"
-account_password = "654789"
-account_city = "hyderabad"
-let account_state
+// account_email = "vunnam@gmail.com"
+// account_password = "654789"
+// account_city = "hyderabad"
+// let account_state
 
 /*
 Prefer not to use var
@@ -33,7 +33,19 @@ var = it can be re-assigned a value and it can also be declared again  (Global s
 
 // console.log(account_id);
 
-console.table([account_id, account_email, account_password, account_city, account_state ])
+// console.table([account_id, account_email, account_password, account_city, account_state ])
+
+{ var x = 13
+{
+function example() {
+    var x = 10;
+    console.log(x); // Output: 10
+    x = 20;
+    console.log(x); // Output: 20
+  }
 
 
-
+example ()
+}
+console.log(x)
+}
