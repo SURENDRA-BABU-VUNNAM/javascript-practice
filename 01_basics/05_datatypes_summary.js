@@ -16,6 +16,7 @@ const anotherId = Symbol('123')
 
 console.log(id === anotherId);
 
+const bigNumber = 3456543576654356754n
 
 // refrence (non primitive)
 // in this type when datatype is called from the memory from refrence
@@ -34,6 +35,6 @@ const myFunction = function(){
     console.log("Hello world");
 }
 
-console.log(typeof anotherId);
+console.log(typeof myFunction);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
