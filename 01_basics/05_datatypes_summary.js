@@ -38,3 +38,12 @@ const myFunction = function(){
 console.log(typeof myFunction);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+// +++++++++++++++++++++++++++++++++++++++++++
+
+// stack (used for primitive datatype) heap (non-primitive)
+
+// when ever stack memory is used whatever variable is used it's copy is given
+
+// when ever heap memory is used it is given to you directly and what ever 
+// changes you make it will effect/change original
