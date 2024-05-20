@@ -52,8 +52,20 @@ const users = [
 
 // users[1].id
 
-console.log(Object.keys(tinder))
-console.log(Object.values(tinder))
-console.log(Object.entries(tinder))
-console.log(tinder.hasOwnProperty(`is_logged_in`))
+// console.log(Object.keys(tinder))
+// console.log(Object.values(tinder))
+// console.log(Object.entries(tinder))
+// console.log(tinder.hasOwnProperty(`is_logged_in`))
 
+const course = {
+    course_name : `js in hindi`,
+    course_price: 999,
+    course_instructor:`surendra`
+}
+
+// object de-sturcture 
+const {course_instructor : instructor} = course
+
+// console.log(instructor)
+
+// json
