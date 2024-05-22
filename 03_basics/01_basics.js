@@ -57,4 +57,40 @@ function login_message (user_name = "sam"){
 }
 
 
-console.log(login_message())  
+// console.log(login_message())  
+
+// function caluculate_cart_price(...num1){
+//     return num1
+// }
+
+// console.log(caluculate_cart_price(100, 200, 300, 400)) 
+
+// function caluculate_cart_price(val1, val2 , ...num1){
+//     return num1
+// }
+
+// console.log(caluculate_cart_price(100, 200, 300, 400)) 
+
+const user = {
+    user_name : `surendra`,
+    price: 999
+}
+
+function object_handel(any_object) {
+    console.log(`the name is ${any_object.user_name} and price is ${any_object.price}`)
+}
+
+// object_handel(user)
+
+// object_handel({
+//     username: `surendra`,
+//     price:9999
+// })
+
+const my_arr =[100,200,300,400]
+
+function return_array (any_arr){
+    return any_arr[2]
+}
+
+console.log(return_array([100,200,30000,400]))
