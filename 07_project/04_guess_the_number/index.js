@@ -7,7 +7,6 @@ const remaining = document.querySelector(".lastResult")
 const low_or_high= document.querySelector(".lowOrHi")
 const start_over= document.querySelector(".resultParas")
 
-
 const p = document.createElement("p")
 
 let prev_guess = []
@@ -65,7 +64,7 @@ function display_guess(guess) {
 }
 
 function display_message(message) {
-    low_or_high.innerHTML = `<h2>${message}</h2>`
+    low_or_high.innerHTML = `<h2 id="message" >${message}</h2>`
 }
 
 function end_game() {
@@ -88,10 +87,11 @@ function new_game() {
         prev_guess =[]
         num_guess=1
         guess_slot.innerHTML =""
-        remaining.innerHTML =""
+        remaining.innerHTML ="10"
         user_input.removeAttribute("disabled")
         start_over.removeChild(p)
-        // location.reload()
+        const message = document.querySelector("#message")
+        message.innerHTML = ""
         play_game = true 
     })
     
