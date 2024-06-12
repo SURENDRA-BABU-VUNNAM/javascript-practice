@@ -69,3 +69,13 @@ const {course_instructor : instructor} = course
 // console.log(instructor)
 
 // json
+
+// {
+//   course_name : `js in hindi`,
+//   course_price: 999,
+//   course_instructor:`surendra`
+// }
+
+// keys are also in string in JSON just like values of the keys
+
+// https://chaicode.com/blogs/64d4d7725db609df6bf2c2f5 for indepth in objects
