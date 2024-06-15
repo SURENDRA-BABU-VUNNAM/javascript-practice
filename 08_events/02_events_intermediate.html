@@ -33,61 +33,66 @@
 <script>
     // the below code shows the use of timestamp
 
-// document.getElementById("images").addEventListener("click", function(event){
-//     console.log(event.timeStamp)
-// })
+    // document.getElementById("images").addEventListener("click", function(event){
+    //     console.log(event.timeStamp)
+    // })
 
-// when i click any thing on browser
-//  i want the exact time and date and what link has been clicked 
-// to be shown on console.log how to do it 
+    // when i click any thing on browser
+    //  i want the exact time and date and what link has been clicked 
+    // to be shown on console.log how to do it 
 
-//  document.getElementById("images").addEventListener("click", function(event){
-//         const timestamp = Date.now() + performance.now()
-//         const click_timestamp = new Date(timestamp) 
-//         console.log( click_timestamp.toLocaleString())
-//         console.log(event.target.id);
-//     })
-
-
-// track user activity based on click
-
-// const session_activity = []
-
-    //     document.getElementById("images").addEventListener("click", function (event) {
+    //  document.getElementById("images").addEventListener("click", function(event){
     //         const timestamp = Date.now() + performance.now()
-    //         const click_timestamp = new Date(timestamp)
-    //         const event_data = {
-    //             click_time: click_timestamp.toLocaleString(),
-    //             click_item: event.target.src
-    //         }
-    //         session_activity.push(event_data)
-    //         console.log(session_activity);
+    //         const click_timestamp = new Date(timestamp) 
+    //         console.log( click_timestamp.toLocaleString())
+    //         console.log(event.target.id);
     //     })
 
-    
-// toElement is depricated use relatedTarget for cross-platform support 
 
-// mouseover works on children to let say you enter into ul > li > img all
-// then mouseover gets triggered for all
+    // track user activity based on click
 
+    // const session_activity = []
 
-    const session_activity =[]
-        document.getElementById("images").addEventListener("mouseover", function (event) {
-            const timestamp = Date.now() + performance.now()
-            const mouseover_timestamp= new Date(timestamp)
-            const event_data = {
-                mouseover_time: mouseover_timestamp.toLocaleString(),
-                mouseover_item: event.target.src
-            }
-            // if (event_data.mouseover_item !== undefined) {
-                session_activity.push(event_data)
-                console.log(session_activity);
-            // }
-            // console.log(event.relatedTarget);
-        })
+    //         document.getElementById("images").addEventListener("click", function (event) {
+    //             const timestamp = Date.now() + performance.now()
+    //             const click_timestamp = new Date(timestamp)
+    //             const event_data = {
+    //                 click_time: click_timestamp.toLocaleString(),
+    //                 click_item: event.target.src
+    //             }
+    //             session_activity.push(event_data)
+    //             console.log(session_activity);
+    //         })
 
 
-    
+        // toElement is depricated use relatedTarget for cross-platform support
+        // In this example,
+        // we add an event listener to the mouseover event on an element with the ID images
+        // When the user hovers over the element, the event listener is triggered,
+
+        // currentTarget: The element that the event is currently being handled on.
+        // relatedTarget: The element that the mouse pointer was over before moving to the current target.
+
+    const session_activity = []
+    document.getElementById("images").addEventListener("mouseover", function (event) {
+        const timestamp = Date.now() + performance.now()
+        const mouseover_timestamp = new Date(timestamp)
+        const event_data = {
+            mouseover_time: mouseover_timestamp.toLocaleString(),
+            mouseover_item: event.target.src
+        }
+        if (event_data.mouseover_item !== undefined) {
+        session_activity.push(event_data)
+        console.log(session_activity);
+        }
+        console.log(event);
+    })
+
+
+
+
+
 
 </script>
+
 </html>
