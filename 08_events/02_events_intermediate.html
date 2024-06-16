@@ -85,14 +85,12 @@
         session_activity.push(event_data)
         console.log(session_activity);
         }
-        console.log(event);
+        console.log(`clientX: ${event.clientX}, clientY: ${event.clientY}`);
+        console.log(`screenX: ${event.screenX}, screenY: ${event.screenY}`);
+        // screen - absolute position of mouse with resp to screen
+        // client - position of mouse with resp to view port
     })
-
-
-
-
-
-
+    
 </script>
 
 </html>
