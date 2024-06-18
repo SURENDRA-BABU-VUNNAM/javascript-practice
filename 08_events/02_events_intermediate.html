@@ -93,10 +93,22 @@
     
     // browser keyboard events
 
-    document.addEventListener("keydown", function(event){
-        if (event.key =="y" && event.ctrlKey ) {
-            console.log("ctrl + y is pressed");
-        }
+    // document.addEventListener("keydown", function(event){
+    //     if (event.key =="y" && event.ctrlKey ) {
+    //         console.log("ctrl + y is pressed");
+    //     }
+    // })
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "ArrowUp") {
+                console.log("arrow up is present");
+            } else if (event.key === 'ArrowLeft') {
+                console.log('Left Arrow key pressed');
+            } else if (event.key === 'ArrowRight') {
+                console.log('Right arrow key pressed');
+            } else if (event.key === 'ArrowDown') {
+                console.log('Down arrow key pressed');
+            }
     })
 </script>
 
