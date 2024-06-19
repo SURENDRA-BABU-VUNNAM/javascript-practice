@@ -2,8 +2,8 @@
 
 let my_date = new Date()
 // console.log(my_date.toString());
-// console.log(my_date.toDateString());
-// console.log(my_date.toLocaleString());
+console.log(my_date.toDateString());
+console.log(my_date.toLocaleString());
 
 let Create_date = new Date(1997, 2, 4)
 // Create_date = new Date(1997, 2, 4, 22, 45)
@@ -28,3 +28,6 @@ console.log(new_date.toLocaleString("default" ,{
 }));
 
 // visit again go in depth 
+
+// https://replit.com/@vunnamsurendrab/JavaScript-Practice#03_time_and_date.js
+// learnt and tried new things in replit link above
