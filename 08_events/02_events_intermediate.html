@@ -64,6 +64,28 @@
     //             console.log(session_activity);
     //         })
 
+// you can get session activity in outside of event listner but it is not 
+// production grade code and event listner is pseudo async one way to overcome
+// is by sending the session activity and storing it in variable 
+
+// document.addEventListener("click", function (event){
+//   arr = ()=>{
+//     const timestamp = Date.now() + performance.now()
+//     const click_timestamp = new Date(timestamp)
+//     const event_data = {
+//         click_time: click_timestamp.toLocaleString(),
+//         click_item: event.target.src
+//     }
+//     session_activity.push(event_data)
+//   }
+//   arr(); // Execute the arrow function
+// });
+
+// // Trigger a click event
+// document.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+
+// console.log(session_activity); // Output: [{ click_time: "...", click_item: "..."}]
+
 
         // toElement is depricated use relatedTarget for cross-platform support
         // In this example,
