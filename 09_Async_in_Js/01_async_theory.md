@@ -11,7 +11,7 @@ non-blocking code does not block the flow of execution
 for example: let say you want to read a file if you do it in blocking format you can't do anything until the file is read 
 if you read file non-blocking code you can do other tasks until other code is read
 
-block diagram at : https://www.youtube.com/watch?v=zgt5oTD3rRc&t=800s
+block diagram at : https://1drv.ms/i/s!Ataadr5DypAinX-14Z6m7o-ziutO?e=6JMJS6
 
 
 look at js engine it contains of memory heap and call stack but it is not enough so you get web API in browser environment which has DOM API and in node there is no DOM API
