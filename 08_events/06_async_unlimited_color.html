@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>unlimited colors</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+
+
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        // random color generator
+        function random_color_generator() {
+            const hex = "123456789ABCDEF"
+            let color = "#"
+            for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random()*hex.length)]
+            }
+            return color
+        }
+        // another way
+            // function randomHexCode() {
+            //     return `#${Math.floor(Math.random() * 16777216).toString(16).padStart(6, '0')}`;
+            // }
+
+            // console.log(randomHexCode());
+    
+let interval_id
+//   function random_background_color() {
+//     interval_id =setInterval(background_color_change,1000)
+//     function background_color_change(){
+//                 document.querySelector("body").style.backgroundColor = random_color_generator()
+//     }
+// }
+
+let random_background_color =function () {
+if (!interval_id) {
+    interval_id= setInterval(() => {
+        document.querySelector("body").style.backgroundColor = random_color_generator()
+    }, 1000);
+}
+}
+function stop_background_color(){
+   clearInterval(interval_id)
+   interval_id = null 
+}
+
+    
+document.querySelector("#start").addEventListener("click",random_background_color)
+document.querySelector("#stop").addEventListener("click",stop_background_color)
+        
+    </script>
+  </body>
+</html>
