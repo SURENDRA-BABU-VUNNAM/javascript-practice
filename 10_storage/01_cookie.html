@@ -8,4 +8,20 @@
 <body>
     
 </body>
+<script>
+    // console.log(document.cookie)
+    // document.cookie = "surendra=12345"
+    // document.cookie = "abracadabra=123456"
+    // document.cookie = "surendra=apple"// gets updated
+    // console.log(document.cookie)
+
+    // encode url component
+    let key = prompt("enter your key")
+    let value = prompt("enter your value")
+    // document.cookie = `${key}=${value}` // behaves funnyly when entered special characters to counter it
+    document.cookie = `${encodeURIComponent(key)} = ${encodeURIComponent(value)}`//use decodeURIComponent("key") to decode
+    console.log(document.cookie);
+
+    // cookie Option are path, expires 
+</script>
 </html>
