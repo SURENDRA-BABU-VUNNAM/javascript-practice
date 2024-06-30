@@ -26,4 +26,19 @@ let score1= 100
 let score2= 200
 let score3= 300
 
-console.log(Array.of(score1, score2, score3));
+console.log(Array.of(score1, score2, score3)); // all variables are put into the array
+
+// set method 
+
+let unique = [1,1,2,2,3,3,100,200,200,300]
+
+let unique_set= new Set(unique) 
+console.log(typeof unique_set)
+console.log(Array.from(unique_set))
+
+console.log(unique_set.has(1))
+unique_set.delete(2)
+console.log(unique_set)
+
+
+
