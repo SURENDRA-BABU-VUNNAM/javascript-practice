@@ -1,67 +1,70 @@
-// let myName = "hitesh     "
-// let mychannel = "chai     "
+let my_name = "surendra   "
 
-// console.log(myName.trueLength);
+// console.log(my_name.true_length)
 
+let my_heros = ["thor", "ironman", "spiderman"]
 
-let myHeros = ["thor", "spiderman"]
-
-
-let heroPower = {
-    thor: "hammer",
-    spiderman: "sling",
-
-    getSpiderPower: function(){
-        console.log(`Spidy power is ${this.spiderman}`);
-    }
+let hero_power ={
+  thor : "hammer",
+  ironman : "suit",
+  spiderman : "web",
+  get_spider_power : function(){
+    console.log(`spiderman power is ${this.spiderman}`)
+  }
 }
 
-Object.prototype.hitesh = function(){
-    console.log(`hitesh is present in all objects`);
+Object.prototype.surendra = function (){
+  console.log("surendra is present in all objects")
 }
 
-Array.prototype.heyHitesh = function(){
-    console.log(`Hitesh says hello`);
+// hero_power.surendra()
+
+// my_heros.surendra()
+
+Array.prototype.hey_surendra = function (){
+  console.log("hey surendra")
+}
+// hero_power.hey_surendra()
+
+// my_heros.hey_surendra()
+
+const user = {
+  user_name: "chai",
+  mail: "chai@example.com",
 }
 
-// heroPower.hitesh()
-// myHeros.hitesh()
-// myHeros.heyHitesh()
-// heroPower.heyHitesh()
-
-// inheritance
-
-const User = {
-    name: "chai",
-    email: "chai@google.com"
+const teacher = {
+  make_video : true
 }
 
-const Teacher = {
-    makeVideo: true
+const teaching_support = {
+  is_available : false 
 }
 
-const TeachingSupport = {
-    isAvailable: false
+const TA_support = {
+  make_assignment : true,
+  full_time : true,
+  __proto__ : teaching_support,
 }
 
-const TASupport = {
-    makeAssignment: 'JS assignment',
-    fullTime: true,
-    __proto__: TeachingSupport
+teacher.__proto__ = user
+
+// the above approach is out dated approach
+
+// modern syntax 
+
+Object.setPrototypeOf(teacher, user)
+
+// here in the user properties are inherited to teacher
+
+let another_user = "apple     "
+
+String.prototype.true_length = function (){
+  console.log(`${this}`)
+  console.log(`true length of the string ${this.trim().length}`)
 }
 
-Teacher.__proto__ = User
+another_user.true_length()
 
-// modern syntax
-Object.setPrototypeOf(TeachingSupport, Teacher)
-
-let anotherUsername = "ChaiAurCode     "
-
-String.prototype.trueLength = function(){
-    console.log(`${this}`);
-    console.log(`True length is: ${this.trim().length}`);
-}
-
-anotherUsername.trueLength()
-"hitesh".trueLength()
-"iceTea".trueLength()
+"surendra".true_length();
+"tea".true_length()
