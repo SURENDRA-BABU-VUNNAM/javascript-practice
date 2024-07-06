@@ -40,5 +40,6 @@ console.log(unique_set.has(1))
 unique_set.delete(2)
 console.log(unique_set)
 
+console.table(unique_set)
 
 
